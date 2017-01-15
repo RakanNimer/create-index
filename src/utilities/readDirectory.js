@@ -50,9 +50,9 @@ export default (directoryPath, options = {}) => {
     const absolutePath = path.resolve(directoryPath, fileName);
     const isDirectory = fs.statSync(absolutePath).isDirectory();
 
-    if (!isSafeName(fileName)) {
-      return false;
-    }
+//     if (!isSafeName(fileName)) {
+//       return false;
+//     }
 
     if (hasNoExtension(fileName) && !isDirectory) {
       return false;
@@ -66,9 +66,9 @@ export default (directoryPath, options = {}) => {
       return false;
     }
 
-    if (!isDirectory && !_.endsWith(fileName, '.js')) {
-      return false;
-    }
+//     if (!isDirectory && !_.endsWith(fileName, '.js')) {
+//       return false;
+//     }
 
     if (isDirectory && !hasIndex(absolutePath)) {
       return false;
