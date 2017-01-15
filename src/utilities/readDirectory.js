@@ -27,9 +27,9 @@ const hasMultipleExtensions = (fileName) => {
   return matches && matches.length > 1;
 };
 
-const isSafeName = (fileName) => {
-  return /^[a-z][a-z0-9._]+$/i.test(fileName);
-};
+// const isSafeName = (fileName) => {
+//   return /^[a-z][a-z0-9._]+$/i.test(fileName);
+// };
 
 const removeDuplicates = (files) => {
   return _.filter(files, (fileName) => {
